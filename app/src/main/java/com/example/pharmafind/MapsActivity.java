@@ -3,7 +3,11 @@ package com.example.pharmafind;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -20,6 +24,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.libraries.places.api.Places;
 import com.google.android.libraries.places.api.net.PlacesClient;
@@ -34,7 +39,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private static final int AUTOCOMPLETE_REQUEST_CODE = 2;
@@ -65,25 +70,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         arrayList.add(new MarkerOptions().position(new LatLng(3.063182888301277, 101.46310132594881)).title("KPJ Klang Specialist Hospital"));
         arrayList.add(new MarkerOptions().position(new LatLng(3.0520242672502693, 101.5054059241796)).title("Columbia Asia Hospital"));
         arrayList.add(new MarkerOptions().position(new LatLng(3.087375859593172, 101.44619103734637)).title("Columbia Asia Hospital - Klang"));
-    }
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-
-        for (MarkerOptions markerOptions : arrayList) {
-            mMap.addMarker(markerOptions);
-            mMap.animateCamera(CameraUpdateFactory.zoomTo(15.0f));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(markerOptions.getPosition()));
-        }
-
-        // Check location permission
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            mMap.setMyLocationEnabled(true);
-            getCurrentLocation();
-        } else {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
-        }
     }
 
     private void getCurrentLocation() {
@@ -154,6 +140,75 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
             mMap.setMyLocationEnabled(true);
             getCurrentLocation();
+        }
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        String destinationTitle = marker.getTitle();
+
+        // Show the location name in a Toast message
+        Toast.makeText(this, "Location: " + destinationTitle, Toast.LENGTH_SHORT).show();
+
+        return false; // Return false to allow further processing of the click event.
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        for (MarkerOptions markerOptions : arrayList) {
+            Marker marker = mMap.addMarker(markerOptions);
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(15.0f));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(markerOptions.getPosition()));
+
+            // Set the OnMarkerClickListener for each marker
+            mMap.setOnMarkerClickListener(this);
+
+            // Set an OnClickListener for the info window (title)
+            mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+                @Override
+                public View getInfoWindow(Marker marker) {
+                    return null; // Return null to use the default info window
+                }
+
+                @Override
+                public View getInfoContents(Marker marker) {
+                    View infoView = getLayoutInflater().inflate(R.layout.custom_info_window, null);
+
+                    TextView titleTextView = infoView.findViewById(R.id.titleTextView);
+
+                    // Set the title (location name) in the info window
+                    titleTextView.setText(marker.getTitle());
+
+                    // Set an OnClickListener for the info window (the entire info window)
+                    infoView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // Open Google Maps for the selected location
+                            Uri gmmIntentUri = Uri.parse("geo:" + marker.getPosition().latitude + "," + marker.getPosition().longitude);
+                            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                            mapIntent.setPackage("com.google.android.apps.maps"); // Specify the package for Google Maps
+
+                            if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                                startActivity(mapIntent);
+                            } else {
+                                Toast.makeText(MapsActivity.this, "Google Maps app not installed", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
+                    return infoView;
+                }
+            });
+        }
+
+        // Check location permission
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            mMap.setMyLocationEnabled(true);
+            getCurrentLocation();
+        } else {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
         }
     }
 }
