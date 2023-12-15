@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Members</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    /* Insert the CSS styles here */
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f5f5;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2em 1em;
+      text-align: center;
+      justify-content: center;
+    }
+    .column {
+      width: 100%;
+      padding: 0.5em 0;
+    }
+    h1 {
+      width: 100%;
+      text-align: center;
+      font-size: 3.5em;
+      color: #1f003b;
+    }
+    .card {
+      box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+      padding: 3.5em 1em;
+      border-radius: 0.6em;
+      color: #1f003b;
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: #ffffff;
+    }
+    .card .img-container {
+      width: 8em;
+      height: 10em;
+      background-color: #a993ff;
+      padding: 0.5em;
+      border-radius: 50%;
+      margin: 0 auto 1em auto;
+    }
+    .img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 50%;
+    }
+    .card h3 {
+      font-weight: 500;
+    }
+    .card p {
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: 0.5em 0 2em 0;
+      letter-spacing: 2px;
+    }
+    .icons {
+      width: 50%;
+      min-width: 180px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .card a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.4em;
+    }
+    .card:hover {
+      background: linear-gradient(#6045ea, #8567f7);
+      color: #ffffff;
+    }
+    .card:hover .img-container {
+      transform: scale(1.15);
+    }
+    @media screen and (min-width: 768px) {
+      section {
+        padding: 1em 7em;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      section {
+        padding: 1em;
+      }
+      .card {
+        padding: 5em 1em;
+      }
+      .column {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 1em;
+      }
+    }
+    #about-app {
+      background-color: #fcfbfb;
+      padding: 3em 0;
+      text-align: center;
+    }
+    #about-app .logo {
+      width: 345px;
+      height: 182px;
+      border-radius: 8px;
+    }
+    #about-app h3 {
+      color: #000;
+      margin-top: 1em;
+    }
+    #about-app p {
+      color: #000;
+      max-width: 600px;
+      margin: 1em auto 0;
+    }
+    #about-app a {
+      color: #000;
+      text-decoration: none;
+    }
+    #about-app a:hover {
+      color: #1f003b;
+    }
+    #copyright {
+      background-color: #1f003b;
+      color: #ffffff;
+      padding: 1em;
+      text-align: center;
+    }
+    #copyright p {
+      font-size: 1.2em;
+    }
+
+    /* Button style */
+  #about-app .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6045ea;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+  }
+
+  /* Button hover effect */
+  #about-app .btn:hover {
+    background-color: #8567f7;
+  }
+
+  .btn-container {
+    margin-top: 50px; /* Add a margin between the paragraph and the button */
+  }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="row">
+      <h1>Our Team</h1>
+    </div>
+    <div class="row">
+      <!-- Column 1-->
+      <div class="column">
+        <div class="card">
+          <div class="img-container">
+            <img src="gambar/2.jpg" />
+          </div>
+          <h3>NUR MUHAMMAD DANIEL BIN SHAFEE</h3>
+          <p>2022794073</p>
+        </div>
+      </div>
+      <!-- Column 2-->
+      <div class="column">
+        <div class="card">
+          <div class="img-container">
+            <img src="gambar/3.jpeg" />
+          </div>
+          <h3>SYARIFAH NURIN HASYA BINTI SYED ZULNURIN</h3>
+          <p>2022949447</p>
+        </div>
+      </div>
+      <!-- Column 3-->
+      <div class="column">
+        <div class="card">
+          <div class="img-container">
+            <img src="gambar/1.jpeg" />
+          </div>
+          <h3>MUHAMMAD NAIM BIN SUHAIMI</h3>
+          <p>2021106939</p>
+        </div>
+      </div>
+      <!-- Column 4-->
+      <div class="column">
+        <div class="card">
+          <div class="img-container">
+            <img src="gambar/4.jpeg" />
+          </div>
+          <h3>MOHAMMAD HANIF HAKIMI BIN MOHAMMAD NOOR IZA</h3>
+          <p>2022949895</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- about our app-->
+  <section id="about-app">
+    <div class="row">
+      <h1>About Our App</h1>
+    </div>
+    <div class="row">
+      <div class="card">
+        <div class="logo-container">
+          <img class="logo" src="gambar/5.png" alt="App Logo" />
+        </div>
+        <h3>MEDICARE+</h3>
+        <p>
+          The MEDICARE+ is a comprehensive solution that blends multiple 
+          functionalities to handle hospitals' challenging difficulties. 
+          It provides a seamless experience for healthcare professionals, 
+          administrators, and patients alike, thanks to its user-friendly 
+          interface and powerful functionality.
+        </p>
+        <div class="btn-container">
+          <a href="https://github.com/hxnif/huntnips" target="_blank" class="btn">Visit on GitHub</a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- copyright-->
+  <section id="copyright">
+    <div class="row">
+      <p>&copy; 2023 MEDICARE+</p>
+    </div>
+  </section>
+</body>
+</html>
