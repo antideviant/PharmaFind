@@ -1,38 +1,45 @@
 {
   "project_info": {
-    "project_number": "75716936887",
-    "firebase_url": "https://healthcare-2ad46-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "healthcare-2ad46",
-    "storage_bucket": "healthcare-2ad46.appspot.com"
+    "project_number": "751327054485",
+    "firebase_url": "https://pharmafind-5f9cd-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "project_id": "pharmafind-5f9cd",
+    "storage_bucket": "pharmafind-5f9cd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:75716936887:android:e8c20b387562aa5aeb7932",
+        "mobilesdk_app_id": "1:751327054485:android:c5429fb1863ad17a4ea99c",
         "android_client_info": {
-          "package_name": "com.example.healthcare"
+          "package_name": "com.example.pharmafind"
         }
       },
       "oauth_client": [
         {
-          "client_id": "75716936887-o5net8e6ck9u0m8akr87ugvu8bngm889.apps.googleusercontent.com",
+          "client_id": "767909606802-r32ej6an80l1muu58kms08r9qp7j861p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBFqR1TfNOd20BeOB4UG41xkdENAhxoqAQ"
+          "current_key": "AIzaSyCDJvVhTo6VYzNWPbAh3RYUyF-1k_tJWCg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "75716936887-o5net8e6ck9u0m8akr87ugvu8bngm889.apps.googleusercontent.com",
+              "client_id": "767909606802-r32ej6an80l1muu58kms08r9qp7j861p.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
         }
+      },
+      "installed": {
+        "client_id":"767909606802-r32ej6an80l1muu58kms08r9qp7j861p.apps.googleusercontent.com",
+        "project_id":"pharmafind-408221",
+        "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+        "token_uri":"https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs"
       }
     }
   ],

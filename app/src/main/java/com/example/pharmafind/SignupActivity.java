@@ -1,4 +1,4 @@
-package com.example.healthcare;
+package com.example.pharmafind;
 
 import android.content.Intent;
 import android.os.Bundle;

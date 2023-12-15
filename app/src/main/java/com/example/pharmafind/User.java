@@ -1,4 +1,4 @@
-package com.example.healthcare;
+package com.example.pharmafind;
 
 public class User {
     private String userUid;

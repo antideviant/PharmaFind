@@ -1,4 +1,4 @@
-package com.example.healthcare;
+package com.example.pharmafind;
 
 import androidx.appcompat.app.AppCompatActivity;
 

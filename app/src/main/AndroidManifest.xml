@@ -11,9 +11,9 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="MediCare+"
+        android:label="PharmaFind"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HealthCare"
+        android:theme="@style/Theme.PharmaFind"
         tools:targetApi="31">
         <activity
             android:name=".WebActivity"
@@ -37,7 +37,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDg4elIflyxujSOnzJ0SmolEP_Gv0_o5oQ" />
+            android:value="AIzaSyCrjpETMEWw7qd076x2kq3zCP9iieori2A" />
 
         <activity
             android:name=".MapsActivity"
