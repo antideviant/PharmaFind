@@ -21,7 +21,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
+//Test123 - By Danish
 public class LoginActivity extends AppCompatActivity {
 
     private EditText editTextUsername, editTextPassword;
