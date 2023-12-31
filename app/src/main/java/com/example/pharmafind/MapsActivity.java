@@ -66,10 +66,15 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
         // Add hospitals to the arrayList
-        arrayList.add(new MarkerOptions().position(new LatLng(3.07199335772288, 101.49012984547059)).title("Hospital Shah Alam"));
-        arrayList.add(new MarkerOptions().position(new LatLng(3.063182888301277, 101.46310132594881)).title("KPJ Klang Specialist Hospital"));
-        arrayList.add(new MarkerOptions().position(new LatLng(3.0520242672502693, 101.5054059241796)).title("Columbia Asia Hospital"));
-        arrayList.add(new MarkerOptions().position(new LatLng(3.087375859593172, 101.44619103734637)).title("Columbia Asia Hospital - Klang"));
+        arrayList.add(new MarkerOptions().position(new LatLng(3.0677993652174194, 101.48890717770531)).title("Vcare Pharmacy Seksyen 7"));
+        arrayList.add(new MarkerOptions().position(new LatLng(3.06666484902148, 101.48907708950229)).title("Health Lane Family Pharmacy Seksyen 7"));
+        arrayList.add(new MarkerOptions().position(new LatLng(3.0628060710693052, 101.48217867620068)).title("CARiNG Pharmacy Central i-City"));
+        arrayList.add(new MarkerOptions().position(new LatLng(3.0623373548861945, 101.48218538172281)).title("Watsons I-City Shah Alam"));
+        arrayList.add(new MarkerOptions().position(new LatLng(3.05891235659538, 101.50562682425411)).title("FirstCare Pharmacy"));
+        arrayList.add(new MarkerOptions().position(new LatLng(3.0768148764533385, 101.494622660439)).title("Jovian Selcare Pharmacy (UNISEL)"));
+        arrayList.add(new MarkerOptions().position(new LatLng(3.0762430413446697, 101.49695909471536)).title("U.N.I FARMASI SEK 7 SHAH ALAM"));
+        arrayList.add(new MarkerOptions().position(new LatLng(3.081730829518426, 101.49232243895051)).title("Guardian Seksyen7 Shah Alam"));
+        arrayList.add(new MarkerOptions().position(new LatLng(3.075393076462164, 101.48616624570177)).title("MedAid Pharmacy"));
     }
 
     private void getCurrentLocation() {
