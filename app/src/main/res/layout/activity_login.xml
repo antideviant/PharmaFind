@@ -27,14 +27,14 @@
 
 
             <TextView
+                android:id="@+id/loginText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Login"
-                android:id="@+id/loginText"
-                android:textSize="36sp"
                 android:textAlignment="center"
-                android:textStyle="bold"
-                android:textColor="@color/purple"/>
+                android:textColor="#65A2C3"
+                android:textSize="36sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -62,14 +62,14 @@
                 android:layout_marginTop="20dp"/>
 
             <Button
+                android:id="@+id/loginButton"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/loginButton"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#6FB1D5"
                 android:text="Login"
                 android:textSize="18sp"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/purple"
-                app:cornerRadius = "20dp"/>
+                app:cornerRadius="20dp" />
 
         </LinearLayout>
 
