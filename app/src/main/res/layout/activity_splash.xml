@@ -9,10 +9,15 @@
 
     <!-- Add an ImageView for your icon -->
     <ImageView
+        android:layout_width="240dp"
+        android:layout_height="322dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/logo" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo"
-        android:contentDescription="App Logo" />
+        android:layout_height="wrap_content" />
 
     <!-- You can also add additional content here if needed -->
 
