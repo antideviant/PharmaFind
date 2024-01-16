@@ -1,14 +1,14 @@
 {
   "project_info": {
-    "project_number": "751327054485",
-    "firebase_url": "https://pharmafind-5f9cd-default-rtdb.asia-southeast1.firebasedatabase.app/",
-    "project_id": "pharmafind-5f9cd",
-    "storage_bucket": "pharmafind-5f9cd.appspot.com"
+    "project_number": "652833438730",
+    "firebase_url": "https://pharmafind-93447-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "project_id": "pharmafind-93447",
+    "storage_bucket": "pharmafind-93447.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:751327054485:android:c5429fb1863ad17a4ea99c",
+        "mobilesdk_app_id": "1:652833438730:android:59bee2e71d68b6aad6b3f3",
         "android_client_info": {
           "package_name": "com.example.pharmafind"
         }
@@ -21,7 +21,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCDJvVhTo6VYzNWPbAh3RYUyF-1k_tJWCg"
+          "current_key": "AIzaSyBeozx3Cna8RkLu0yIDMJsc7EvCpMnm2H8"
         }
       ],
       "services": {
