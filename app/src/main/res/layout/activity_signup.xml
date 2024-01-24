@@ -8,14 +8,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="#0588a2"
     tools:context=".SignupActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="20dp"
+        app:cardCornerRadius="45dp"
+        app:cardElevation="100dp"
         android:background="@drawable/custom_edittext">
 
         <LinearLayout

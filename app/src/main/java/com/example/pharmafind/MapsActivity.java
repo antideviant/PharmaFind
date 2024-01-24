@@ -77,16 +77,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         arrayList.add(new MarkerOptions().position(new LatLng(3.075393076462164, 101.48616624570177)).title("MedAid Pharmacy"));
     }
 
-    private void getCurrentLocation() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            fusedLocationProviderClient.getLastLocation().addOnSuccessListener(this, location -> {
-                if (location != null) {
-                    LatLng currentLatLng = new LatLng(location.getLatitude(), location.getLongitude());
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 15f));
-                    addMarkersForNearestHospitals(currentLatLng);
-                }
-            });
-        }
+    private void setCurrentLocation(double latitude, double longitude) {
+        LatLng specificLatLng = new LatLng(latitude, longitude);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(specificLatLng, 15f));
+        addMarkersForNearestHospitals(specificLatLng);
     }
 
     private void addMarkersForNearestHospitals(LatLng currentLatLng) {
@@ -144,7 +138,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 return;
             }
             mMap.setMyLocationEnabled(true);
-            getCurrentLocation();
+            setCurrentLocation(3.068424820822796, 101.49355750168766);
         }
     }
 
@@ -211,7 +205,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         // Check location permission
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             mMap.setMyLocationEnabled(true);
-            getCurrentLocation();
+            setCurrentLocation(3.068424820822796, 101.49355750168766);
         } else {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
         }
