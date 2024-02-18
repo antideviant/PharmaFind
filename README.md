@@ -1,2 +1,2 @@
 # PharmaFind
- ICT602 Pharmacies Locater App - In Progress
+ ICT602 Pharmacies Locater App - BETA
